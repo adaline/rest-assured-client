@@ -10,13 +10,6 @@ class RestAssured
     @url = url
   end
 
-  def accounts
-    RestClient.get(
-      "#{@url}/accounts",
-      headers
-    )
-  end
-
   def transactions
     RestClient.get(
       "#{@url}/transactions",
@@ -44,5 +37,5 @@ class RestAssured
 end
 
 # require './rest_assured'
-# rest_assured = RestAssured.new('http://xxxx', 'xxxx')
-# puts rest_assured.accounts
+# rest_assured = RestAssured.new('http://xxxx/api', 'xxxx')
+# puts rest_assured.transactions
